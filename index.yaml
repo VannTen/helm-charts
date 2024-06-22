@@ -2053,6 +2053,75 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: v0.74.0
+    created: "2024-06-22T19:47:12.682238617Z"
+    dependencies:
+    - condition: crds.enabled
+      name: crds
+      repository: ""
+      version: 0.0.0
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 5.20.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.36.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.0.*
+    - condition: windowsMonitoring.enabled
+      name: prometheus-windows-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 0.3.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 323e3838f12602b270b7f8977cb81fbea80ebefa0d1f6b7122f5b0c2570cd5fa
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: andrew@quadcorps.co.uk
+      name: andrewgkew
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: kube-prometheus-stack@sisti.pt
+      name: GMartinez-Sisti
+    - email: github@jkroepke.de
+      name: jkroepke
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: quentin.bisson@gmail.com
+      name: QuentinBisson
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/kube-prometheus-stack-60.3.0/kube-prometheus-stack-60.3.0.tgz
+    version: 60.3.0
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: v0.74.0
     created: "2024-06-04T08:25:51.911234082Z"
     dependencies:
     - condition: crds.enabled
@@ -37166,6 +37235,36 @@ entries:
           url: https://github.com/prometheus-community/helm-charts
     apiVersion: v2
     appVersion: 2.12.0
+    created: "2024-06-22T19:47:12.860543335Z"
+    description: Install kube-state-metrics to generate and expose cluster-level metrics
+    digest: f80693a26fa1ffea5ada03260c6f2800120cda974354d4949587c199aaf8a234
+    home: https://github.com/kubernetes/kube-state-metrics/
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    - kubernetes
+    maintainers:
+    - email: tariq.ibrahim@mulesoft.com
+      name: tariq1890
+    - email: manuel@rueg.eu
+      name: mrueg
+    - email: david@0xdc.me
+      name: dotdc
+    name: kube-state-metrics
+    sources:
+    - https://github.com/kubernetes/kube-state-metrics/
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/kube-state-metrics-5.20.0/kube-state-metrics-5.20.0.tgz
+    version: 5.20.0
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+    apiVersion: v2
+    appVersion: 2.12.0
     created: "2024-06-04T08:25:52.084994423Z"
     description: Install kube-state-metrics to generate and expose cluster-level metrics
     digest: 5445215101aec03ef91f6b8f6200c39a8286535adcf5cdef5eb67bcbdab11378
@@ -39945,6 +40044,24 @@ entries:
     version: 2.13.2
   prom-label-proxy:
   - apiVersion: v2
+    appVersion: v0.10.0
+    created: "2024-06-22T19:47:13.045273807Z"
+    description: A proxy that enforces a given label in a given PromQL query.
+    digest: 2f81f0044c1c598efae278bf7c009745971e724a263be9718b25168df010c120
+    home: https://github.com/prometheus-community/prom-label-proxy
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    maintainers:
+    - email: github@jkroepke.de
+      name: jkroepke
+    name: prom-label-proxy
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prom-label-proxy-0.8.0/prom-label-proxy-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
     appVersion: v0.8.1
     created: "2024-06-04T08:25:52.266822617Z"
     description: A proxy that enforces a given label in a given PromQL query.
@@ -40107,6 +40224,63 @@ entries:
     - https://github.com/prometheus-community/helm-charts/releases/download/prom-label-proxy-0.1.0/prom-label-proxy-0.1.0.tgz
     version: 0.1.0
   prometheus:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus/prometheus
+    apiVersion: v2
+    appVersion: v2.53.0
+    created: "2024-06-22T19:47:13.218098542Z"
+    dependencies:
+    - condition: alertmanager.enabled
+      name: alertmanager
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.11.*
+    - condition: kube-state-metrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 5.20.*
+    - condition: prometheus-node-exporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.36.*
+    - condition: prometheus-pushgateway.enabled
+      name: prometheus-pushgateway
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 2.13.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: 45d45fd10ec2be9df49710daee80a7f14824902aa84862f11323fdc2e296293c
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - monitoring
+    - prometheus
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: naseem@transit.app
+      name: naseemkullah
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-25.22.1/prometheus-25.22.1.tgz
+    version: 25.22.1
   - annotations:
       artifacthub.io/license: Apache-2.0
       artifacthub.io/links: |
@@ -61346,6 +61520,30 @@ entries:
   prometheus-elasticsearch-exporter:
   - apiVersion: v1
     appVersion: v1.7.0
+    created: "2024-06-22T19:47:13.393777957Z"
+    description: Elasticsearch stats exporter for Prometheus
+    digest: 4228566ababfe18daa87a5cbe4c0b8b1253dcd20dd854e63fc3d933cd9c4131e
+    home: https://github.com/prometheus-community/elasticsearch_exporter
+    keywords:
+    - metrics
+    - elasticsearch
+    - monitoring
+    kubeVersion: '>=1.10.0-0'
+    maintainers:
+    - email: sven.mueller@commercetools.com
+      name: svenmueller
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-elasticsearch-exporter
+    sources:
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-elasticsearch-exporter
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-elasticsearch-exporter-5.8.1/prometheus-elasticsearch-exporter-5.8.1.tgz
+    version: 5.8.1
+  - apiVersion: v1
+    appVersion: v1.7.0
     created: "2024-06-04T08:25:53.013569332Z"
     description: Elasticsearch stats exporter for Prometheus
     digest: 5ab80b5bc4aafb9550165bd9c8a4b66b8b9e4d588225d2145d625c2c892d8dca
@@ -62229,6 +62427,24 @@ entries:
   prometheus-ipmi-exporter:
   - apiVersion: v2
     appVersion: v1.8.0
+    created: "2024-06-22T19:47:13.55632886Z"
+    description: This is an IPMI exporter for Prometheus.
+    digest: 95f12ee1dec7384420bdd2e02994bd27666040e34b1054b0b7e49a9ae3da0bc5
+    home: https://github.com/prometheus-community/ipmi_exporter
+    keywords:
+    - metrics
+    - ipmi
+    - monitoring
+    maintainers:
+    - email: f@lex.la
+      name: lexfrei
+    name: prometheus-ipmi-exporter
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-ipmi-exporter-0.4.0/prometheus-ipmi-exporter-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: v1.8.0
     created: "2024-02-11T19:13:00.406963821Z"
     description: This is an IPMI exporter for Prometheus.
     digest: 5826c982883e729be9848a6aff2a5c598019a1842df159cddb6365807da8e5e7
@@ -62300,6 +62516,27 @@ entries:
     - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-ipmi-exporter-0.1.0/prometheus-ipmi-exporter-0.1.0.tgz
     version: 0.1.0
   prometheus-json-exporter:
+  - apiVersion: v2
+    appVersion: v0.6.0
+    created: "2024-06-22T19:47:13.729188602Z"
+    description: Install prometheus-json-exporter
+    digest: 6acc94ddce13f384dd39dd5d7ac2298ab696d2f3d0b8482bc37f9af525a2ef5c
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    maintainers:
+    - email: schmiddim@gmx.at
+      name: schmiddim
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: github@xiu.io
+      name: xiu
+    name: prometheus-json-exporter
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-json-exporter-0.11.1/prometheus-json-exporter-0.11.1.tgz
+    version: 0.11.1
   - apiVersion: v2
     appVersion: v0.6.0
     created: "2024-01-09T17:35:30.377519821Z"
@@ -65712,6 +65949,35 @@ entries:
     - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-nginx-exporter-0.1.0/prometheus-nginx-exporter-0.1.0.tgz
     version: 0.1.0
   prometheus-node-exporter:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+    apiVersion: v2
+    appVersion: 1.8.1
+    created: "2024-06-22T19:47:13.923945466Z"
+    description: A Helm chart for prometheus node-exporter
+    digest: f53390e7dfd55ce6c3a804ce0d076b4963603ea92c398ca31aae31465d1eef09
+    home: https://github.com/prometheus/node_exporter/
+    keywords:
+    - node-exporter
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-node-exporter
+    sources:
+    - https://github.com/prometheus/node_exporter/
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-node-exporter-4.36.0/prometheus-node-exporter-4.36.0.tgz
+    version: 4.36.0
   - annotations:
       artifacthub.io/license: Apache-2.0
       artifacthub.io/links: |
@@ -79373,6 +79639,36 @@ entries:
         - name: Upstream Project
           url: https://github.com/prometheus-operator/prometheus-operator
     apiVersion: v2
+    appVersion: 0.74.0
+    created: "2024-06-22T19:47:14.097161566Z"
+    description: Prometheus Operator Admission Webhook
+    digest: b7b66a4232cfb620350cd0b6e6777186b3a29b4a46b90ca68553dcb267ef6585
+    home: https://github.com/prometheus-operator/prometheus-operator
+    icon: https://github.com/prometheus-operator/prometheus-operator/raw/main/Documentation/logos/prometheus-operator-logo.png
+    keywords:
+    - admission
+    - monitoring
+    - prometheus-operator
+    - webhook
+    maintainers:
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-operator-admission-webhook
+    sources:
+    - https://github.com/prometheus-operator/prometheus-operator
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-operator-admission-webhook
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-operator-admission-webhook-0.13.0/prometheus-operator-admission-webhook-0.13.0.tgz
+    version: 0.13.0
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/prometheus-operator
+    apiVersion: v2
     appVersion: 0.73.0
     created: "2024-06-04T08:25:54.344430772Z"
     description: Prometheus Operator Admission Webhook
@@ -82775,6 +83071,34 @@ entries:
     - https://prometheus-community.github.io/helm-charts/prometheus-postgres-exporter-0.1.0.tgz
     version: 0.1.0
   prometheus-pushgateway:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+    apiVersion: v2
+    appVersion: v1.8.0
+    created: "2024-06-22T19:47:14.472891097Z"
+    description: A Helm chart for prometheus pushgateway
+    digest: be08fc3f3175d47ea286a4d8ed3bf8ced35412043ca1a1ecc37f9219f8b9a25d
+    home: https://github.com/prometheus/pushgateway
+    keywords:
+    - pushgateway
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: christian.staude@staffbase.com
+      name: cstaud
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-pushgateway
+    sources:
+    - https://github.com/prometheus/pushgateway
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-pushgateway-2.13.0/prometheus-pushgateway-2.13.0.tgz
+    version: 2.13.0
   - annotations:
       artifacthub.io/license: Apache-2.0
       artifacthub.io/links: |
@@ -86253,6 +86577,23 @@ entries:
   prometheus-smartctl-exporter:
   - apiVersion: v2
     appVersion: v0.12.0
+    created: "2024-06-22T19:47:14.644956915Z"
+    description: A Helm chart for Kubernetes
+    digest: 7e19a7402c7fc2f6bc41726613ce79a302abe87ddd9305e8a28a4cb68bbdfb65
+    home: https://github.com/prometheus-community/smartctl_exporter
+    maintainers:
+    - name: kfox1111
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-smartctl-exporter
+    sources:
+    - https://github.com/prometheus-community/smartctl_exporter
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-smartctl-exporter-0.10.0/prometheus-smartctl-exporter-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v2
+    appVersion: v0.12.0
     created: "2024-06-04T08:25:55.107404152Z"
     description: A Helm chart for Kubernetes
     digest: b7561f59f4473ff360f34030e4f8085d5ad09ab3fa2ca2e72683ba6414e15168
@@ -88628,4 +88969,4 @@ entries:
     urls:
     - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-windows-exporter-0.1.0/prometheus-windows-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-04T08:25:55.830039668Z"
+generated: "2024-06-22T19:47:14.651632736Z"
