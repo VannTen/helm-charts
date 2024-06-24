@@ -37235,6 +37235,36 @@ entries:
           url: https://github.com/prometheus-community/helm-charts
     apiVersion: v2
     appVersion: 2.12.0
+    created: "2024-06-24T22:30:29.538350309Z"
+    description: Install kube-state-metrics to generate and expose cluster-level metrics
+    digest: a5b090041b9567fce7154381b309f0a5b3e49c7c7233817bdb007a9317bd9985
+    home: https://github.com/kubernetes/kube-state-metrics/
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    - kubernetes
+    maintainers:
+    - email: tariq.ibrahim@mulesoft.com
+      name: tariq1890
+    - email: manuel@rueg.eu
+      name: mrueg
+    - email: david@0xdc.me
+      name: dotdc
+    name: kube-state-metrics
+    sources:
+    - https://github.com/kubernetes/kube-state-metrics/
+    type: application
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/kube-state-metrics-5.20.1/kube-state-metrics-5.20.1.tgz
+    version: 5.20.1
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+    apiVersion: v2
+    appVersion: 2.12.0
     created: "2024-06-22T19:47:12.860543335Z"
     description: Install kube-state-metrics to generate and expose cluster-level metrics
     digest: f80693a26fa1ffea5ada03260c6f2800120cda974354d4949587c199aaf8a234
@@ -62339,6 +62369,23 @@ entries:
     - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-elasticsearch-exporter-4.0.0/prometheus-elasticsearch-exporter-4.0.0.tgz
     version: 4.0.0
   prometheus-fastly-exporter:
+  - apiVersion: v2
+    appVersion: v8.1.0
+    created: "2024-06-24T22:30:29.635202617Z"
+    description: A Helm chart for the Prometheus Fastly Exporter
+    digest: 30e784c311b7ab9d787591a119d37f3988e49eccada62421326d13cee04c557a
+    home: https://github.com/fastly/fastly-exporter
+    keywords:
+    - metrics
+    - fastly
+    - monitoring
+    maintainers:
+    - email: arslanbekov@gmail.com
+      name: arslanbekov
+    name: prometheus-fastly-exporter
+    urls:
+    - https://github.com/VannTen/helm-charts/releases/download/prometheus-fastly-exporter-0.4.0/prometheus-fastly-exporter-0.4.0.tgz
+    version: 0.4.0
   - apiVersion: v2
     appVersion: v7.6.1
     created: "2023-12-14T02:57:55.101753211Z"
@@ -88969,4 +89016,4 @@ entries:
     urls:
     - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-windows-exporter-0.1.0/prometheus-windows-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-22T19:47:14.651632736Z"
+generated: "2024-06-24T22:30:29.639480434Z"
